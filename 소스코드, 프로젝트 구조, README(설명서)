@@ -1,0 +1,20 @@
+프로젝트 개요
+프로젝트명: visitkorea
+설명: 한국의 해변을 테마로 한 웹사이트. Next.js 기반으로 제작되었으며, 반응형 UI와 이미지, 스크롤 애니메이션 등 다양한 기능을 제공합니다.
+
+프레임워크: Next.js
+언어: JavaScript (React, JSX)
+스타일: TailwindCSS, Custom CSS (globals.css)
+기타: PostCSS, jsconfig.json(경로 별칭)
+
+해변 테마의 메인 페이지 및 이미지 배경
+스크롤 애니메이션 및 부드러운 이동
+반응형 레이아웃
+Google Fonts 적용
+TailwindCSS를 활용한 스타일링
+
+의존성 설치
+npm install
+개발 서버 실행
+npm run dev
+브라우저에서 http://localhost:3000 접속
