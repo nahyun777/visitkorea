@@ -1,28 +1,32 @@
-import Image from 'next/image';
+"use client";
+
+import { useRef } from 'react';
 
 export default function Home() {
+  const contentRef = useRef(null);
+
+  const handleScrollDown = () => {
+    contentRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
     <main>
-      <header className="header">
-        <div className="logo">
-          <a href="#">VISITKOREA</a>
-        </div>
-        <nav className="nav">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-        </nav>
-      </header>
       <div className="hero">
-        <div className="prize-badge">
-          <Image src="/prize.svg" alt="Winner Prize" width={80} height={80} />
+        <div className="bg-panel-container">
+          <div className="bg-panel" style={{ backgroundImage: "url('/hero.jpg')" }} />
+          <div
+            className="bg-panel"
+            style={{
+              backgroundImage: "url('/m.jpg')",
+            }}
+          />
+          <div className="bg-panel" style={{ backgroundImage: "url('/h.jpg')" }} />
         </div>
         <div className="hero-text">
-          <h1>WORK</h1>
-          <h1>ON THE</h1>
+
           <h1>BEACH</h1>
         </div>
-        <div className="scroll-down">
+        <div className="scroll-down" onClick={handleScrollDown}>
           <span>scroll</span>
           <svg
             width="24"
@@ -39,6 +43,35 @@ export default function Home() {
               strokeLinejoin="round"
             />
           </svg>
+        </div>
+      </div>
+      <div className="content-container">
+        <div ref={contentRef} className="content-section">
+          <div className="content-left image-container">
+            <img src="/hero.jpg" alt="Hero Image" className="content-image" />
+          </div>
+          <div className="content-right">
+            <h2>협재 해수욕장</h2>
+            <p>제주 제주시 한림읍 협재리 2497-1</p>
+          </div>
+        </div>
+        <div className="content-section">
+          <div className="content-left">
+            <h2>함덕 해수욕장</h2>
+            <p>제주 제주시 조천읍 조함해안로 525</p>
+          </div>
+          <div className="content-right image-container">
+            <img src="/m.jpg" alt="M Image" className="content-image" />
+          </div>
+        </div>
+        <div className="content-section">
+          <div className="content-left image-container">
+            <img src="/h.jpg" alt="H Image" className="content-image" />
+          </div>
+          <div className="content-right">
+            <h2>월정리 해수욕장</h2>
+            <p>제주 제주시 구좌읍 해맞이해안로 481 485,</p>
+          </div>
         </div>
       </div>
     </main>
