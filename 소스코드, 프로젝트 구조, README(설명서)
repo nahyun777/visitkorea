@@ -19,3 +19,5 @@ npm install
 npm run dev
 브라우저에서 http://localhost:3000 접속
 
+이미지 참고 : main.png, footer_1.png, footer_2.png
+
