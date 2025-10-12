@@ -48,9 +48,9 @@ export default function Home() {
         </div>
       </div>
       <div className="content-container">
-        <Link 
-          href="/beach/hyeopjae" 
-          ref={contentRef} 
+        <Link
+          href="/beach/hyeopjae"
+          ref={contentRef}
           className="content-section clickable-section group"
         >
           <div className="content-left image-container">
@@ -73,8 +73,8 @@ export default function Home() {
             </div>
           </div>
         </Link>
-        <Link 
-          href="/beach/hamdeok" 
+        <Link
+          href="/beach/hamdeok"
           className="content-section clickable-section group"
         >
           <div className="content-left">
@@ -97,8 +97,8 @@ export default function Home() {
             <img src="/m.jpg" alt="함덕 해수욕장" className="content-image" />
           </div>
         </Link>
-        <Link 
-          href="/beach/woljeong" 
+        <Link
+          href="/beach/woljeong"
           className="content-section clickable-section group"
         >
           <div className="content-left image-container">
